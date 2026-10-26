@@ -34,17 +34,17 @@ const XIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const OnlyFansIcon = ({ className }: { className?: string }) => (
-  <div className={`relative flex items-center justify-center transition-all duration-200 ${className}`}>
-    <Image 
-      src="/onlyfans.svg" 
-      alt="OnlyFans" 
-      width={16} 
-      height={16} 
-      className="object-contain brightness-[0.7] group-hover:brightness-100 transition-all duration-200"
-    />
-  </div>
-);
+// const OnlyFansIcon = ({ className }: { className?: string }) => (
+//   <div className={`relative flex items-center justify-center transition-all duration-200 ${className}`}>
+//     <Image 
+//       src="/onlyfans.svg" 
+//       alt="OnlyFans" 
+//       width={16} 
+//       height={16} 
+//       className="object-contain brightness-[0.7] group-hover:brightness-100 transition-all duration-200"
+//     />
+//   </div>
+// );
 
 // --- CHAOTIC LIQUID ENTROPY MATERIAL ENGINE ---
 interface Grain {
