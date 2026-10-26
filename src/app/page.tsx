@@ -314,37 +314,24 @@ export default function HiringExperience() {
 
           {/* 3. SOCIALS CARD BENTO CLUSTER */}
           <div className="order-3 lg:order-none lg:col-span-1 lg:row-span-2 flex flex-col gap-4">
-            {[
-              { label: "LinkedIn", href: "https://linkedin.com/in/atharvmalve", icon: LinkedInIcon },
-              { label: "GitHub", href: "https://github.com/atharvmalve", icon: GitHubIcon },
-              { label: "X", href: "https://x.com/devvincii", icon: XIcon },
-              { label: "Mail", href: "mailto:atharvmalve@gmail.com", icon: Mail },
-              // { label: "OnlyFans", href: "#", icon: OnlyFansIcon, actionToast: true }
-            ].map((social) => {
-              const cardMarkup = (
-                <Card className="h-full min-h-[72px] flex items-center justify-between px-6 group cursor-pointer">
-                  <span className="font-medium text-[#FAFAFA] flex items-center gap-3">
-                    <social.icon className="w-4 h-4 text-[#A1A1AA] group-hover:text-white transition-colors" />
-                    {social.label}
-                  </span>
-                  <ArrowUpRight className="w-4 h-4 text-[#A1A1AA] opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Card>
-              );
+           
+{[
+  { label: "LinkedIn", href: "https://linkedin.com/in/atharvmalve", icon: LinkedInIcon },
+  { label: "GitHub", href: "https://github.com/atharvmalve", icon: GitHubIcon },
+  { label: "X", href: "https://x.com/devvincii", icon: XIcon },
+  { label: "Mail", href: "mailto:atharvmalve@gmail.com", icon: Mail },
+].map((social) => (
+  <Link key={social.label} href={social.href} className="block flex-1">
+    <Card className="h-full min-h-[72px] flex items-center justify-between px-6 group cursor-pointer">
+      <span className="font-medium text-[#FAFAFA] flex items-center gap-3">
+        <social.icon className="w-4 h-4 text-[#A1A1AA] group-hover:text-white transition-colors" />
+        {social.label}
+      </span>
+      <ArrowUpRight className="w-4 h-4 text-[#A1A1AA] opacity-0 group-hover:opacity-100 transition-opacity" />
+    </Card>
+  </Link>
+))}
 
-              return social.actionToast ? (
-                <button 
-                  key={social.label} 
-                  onClick={() => setToastVisible(true)} 
-                  className="block flex-1 text-left outline-none border-none bg-transparent p-0 w-full"
-                >
-                  {cardMarkup}
-                </button>
-              ) : (
-                <Link key={social.label} href={social.href} className="block flex-1">
-                  {cardMarkup}
-                </Link>
-              );
-            })}
           </div>
 
           {/* 4. EXPERIENCE CARD */}
