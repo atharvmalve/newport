@@ -319,7 +319,7 @@ export default function HiringExperience() {
               { label: "GitHub", href: "https://github.com/atharvmalve", icon: GitHubIcon },
               { label: "X", href: "https://x.com/devvincii", icon: XIcon },
               { label: "Mail", href: "mailto:atharvmalve@gmail.com", icon: Mail },
-              { label: "OnlyFans", href: "#", icon: OnlyFansIcon, actionToast: true }
+              // { label: "OnlyFans", href: "#", icon: OnlyFansIcon, actionToast: true }
             ].map((social) => {
               const cardMarkup = (
                 <Card className="h-full min-h-[72px] flex items-center justify-between px-6 group cursor-pointer">
